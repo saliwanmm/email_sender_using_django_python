@@ -5,6 +5,12 @@
 
 .container {
     text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.container row mb-4 {
+    max-width: 30%;
 }
 
 .user {
