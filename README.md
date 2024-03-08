@@ -38,6 +38,12 @@ $ pip install -r requirements.txt
 $ touch .env
 ```
 
+**Open .env file and insert your data to EMAIL SETTINGS:**
+
+```
+$ .env / EMAIL_HOST_USER='' and .env / EMAIL_HOST_PASSWORD=''
+```
+
 **Build web and database containers**
 
 ```
@@ -49,3 +55,5 @@ $ sudo docker-compose build
 ```
 $ sudo docker-compose up
 ```
+
+**Superuser: username - admin, password - admin**

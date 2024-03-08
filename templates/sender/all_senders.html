@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- HTML page where we can see all subscribers -->
+<div class="container">
+    <p>Here will be all senders</p>
+    {% for sender in senders %}
+    <div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{ sender.first_name }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ sender.last_name }}</h6>
+                <p class="card-text">{{ sender.email }}</p>
+                <p class="card-text">
+                    {% if sender.subscribe == True %}
+                    Subscribe
+                    {% else %}
+                    Unsubscribe
+                    {% endif %}
+                </p>
+                <a href="{% url 'delete_sender' id=sender.id %}" class="card-link">Delete</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

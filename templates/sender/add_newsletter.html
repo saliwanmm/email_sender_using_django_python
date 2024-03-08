@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- HTML page creation of automatic distribution of messages -->
+<div class="container">
+    <p>New newsletter</p>
+    <form method="post" action="{% url 'add_newsletter' %}">
+        {% csrf_token %}
+        <!-- This field responsible for title of newsletter  -->
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Title</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="name" placeholder="Title of the email" required>
+        </div>
+        <!-- his field responsible for text of newsletter -->
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+            <textarea class="form-control" name="message" id="exampleFormControlTextarea1" placeholder="Message to be delivered" rows="3" required></textarea>
+        </div>
+        <button class="btn btn-primary mt2" type="submit">Send</button>
+    </form>
+</div>
+{% endblock %}

@@ -7,3 +7,17 @@ DB_USER='django'
 DB_PASSWORD='django'
 DB_HOST='db'
 DB_PORT="3306"
+
+# EMAIL SETTINGS
+# Email configurations for sending messages
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+# Host for sending e-mail.
+EMAIL_HOST='smtp.gmail.com'
+# Port for sending e-mail.
+EMAIL_PORT='587'
+# Optional SMTP authentication information for EMAIL_HOST.
+# Your EMAIL HOST
+EMAIL_HOST_USER='youremail@gmail.com'
+# Your EMAIL authentication code (NOT PASSWORD to your EMAIL)
+EMAIL_HOST_PASSWORD='yourauthenticationcode'
+EMAIL_USE_TLS=True

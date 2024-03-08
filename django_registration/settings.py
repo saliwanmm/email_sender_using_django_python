@@ -29,6 +29,24 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# ******************** <--- EMAIL SETTINGS ---> ************************
+
+# Email configurations for sending messages
+EMAIL_BACKEND = os.getenv("EMAIL_BACKEND")
+
+# Host for sending e-mail.
+EMAIL_HOST = os.getenv("EMAIL_HOST")
+
+# Port for sending e-mail.
+EMAIL_PORT = os.getenv("EMAIL_PORT")
+
+# Optional SMTP authentication information for EMAIL_HOST.
+EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
+EMAIL_USE_TLS = os.getenv("EMAIL_USE_TLS")
+
+# ******************** <--- EMAIL SETTINGS ---> ************************
+
 ALLOWED_HOSTS = ["*"]
 
 

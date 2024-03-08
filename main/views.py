@@ -3,15 +3,15 @@ from django.contrib.auth import authenticate, login, logout
 
 from django.contrib.auth.models import User
 
-
+# Function for home page
 def homeView(request):
     return render(request, "main/index.html")
 
-
+# Function for about page
 def aboutView(request):
     return render(request, "main/about.html")
 
-
+# Function for registrations new users
 def sign_up_View(request):
     if request.method == "POST":
         user = User()
@@ -30,7 +30,7 @@ def sign_up_View(request):
     else:
         return render(request, "main/sign_up.html", {})
 
-
+# Function for authorization users on site
 def sign_in_View(request):
     if request.method == "POST":
         user = authenticate(request, username=request.POST.get("username"), password=request.POST.get("password"))
@@ -42,7 +42,7 @@ def sign_in_View(request):
     else:
         return render(request, "main/sign_in.html", {})
 
-
+# Function for logout users
 def logout_View(request):
     if request.user.is_authenticated:
         logout(request)

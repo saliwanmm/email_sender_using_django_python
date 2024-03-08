@@ -1,28 +1,31 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+<!-- HTML page for subscription -->
 <div class="container">
     <h2>Subscribe for our newsletter</h2>
 </div>
 <div class="container" style="text-align: center;">
     <form method="post" action="{% url 'add_sender' %}">
         {% csrf_token %}
+        <!-- Field for entering a first name -->
         <div class="mb-3">
             <label for="first_name" class="form-label">First name</label>
             <input type="text" class="form-control" name="first_name" id="first_name">
         </div>
-
+        <!-- Field for entering a last name -->
         <div class="mb-3">
             <label for="last_name" class="form-label">Last name</label>
             <input type="text" class="form-control" name="last_name" id="last_name">
         </div>
-
+        <!-- Field for entering an email -->
         <div class="mb-3">
             <label for="email" class="form-label">Email address</label>
             <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
         </div>
-
+        <!-- Field for confirming consent to automatic mailing of messages -->
         <div class="mb-3 form-check">
             <input type="hidden" name="subscribe" value="False">
             <input type="checkbox" class="form-check-input" name="subscribe" id="subscribe" value="True">
