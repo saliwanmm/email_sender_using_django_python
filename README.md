@@ -56,4 +56,5 @@ $ sudo docker-compose build
 $ sudo docker-compose up
 ```
 
-**Superuser: username - admin, password - admin**
+**Superuser: username - admin, password - admin.**
+**You must be logged in as an administrator to send automatic newsletters** 
