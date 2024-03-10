@@ -1,8 +1,8 @@
-# Login system in Python Django 
+# Email Sender 
 
 ## Description
 
-**This project you can use for any site with the login system**
+**This project allows automatic sending of messages to site subscribers**
 
 ## Technologies used in the project
 - Python
